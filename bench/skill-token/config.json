@@ -1,0 +1,38 @@
+{
+  "models": {
+    "claude": "sonnet",
+    "copilot": "<set: model shown by `copilot -p hi`>"
+  },
+  "repeats": 1,
+  "timeout_s": 900,
+  "claude_cmd": [
+    "claude",
+    "-p",
+    "{prompt}",
+    "--output-format",
+    "json",
+    "--model",
+    "{model}",
+    "--permission-mode",
+    "bypassPermissions"
+  ],
+  "copilot_cmd": [
+    "copilot",
+    "-p",
+    "{prompt}",
+    "--output-format",
+    "json",
+    "--model",
+    "{model}",
+    "--allow-all-tools"
+  ],
+  "skill_dirs": {
+    "claude": ".claude/skills",
+    "copilot": ".github/skills"
+  },
+  "pass_bar": {
+    "rule": "per task: candidate median turns <= baseline, median cost_usd <= baseline, median quality >= baseline (Claude Code)",
+    "feature_min_passes": 2
+  },
+  "default_tool": "claude"
+}

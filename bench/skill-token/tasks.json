@@ -1,0 +1,79 @@
+[
+  {
+    "id": "T1-plan-clear",
+    "class": "A",
+    "versions": [
+      "v1",
+      "v2"
+    ],
+    "prompt": "Use the running-when-a-request-is-made skill. Plan adding `cancel_order(order_id)` to src/orders.py: sets status to 'cancelled', raises ValueError for unknown IDs, with unit tests. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T2-plan-vague",
+    "class": "A+IG",
+    "versions": [
+      "v1",
+      "v2"
+    ],
+    "prompt": "Use the running-when-a-request-is-made skill. Make order handling better and faster. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T3-plan-docs",
+    "class": "A",
+    "versions": [
+      "v1",
+      "v2"
+    ],
+    "prompt": "Use the running-when-a-request-is-made skill. Plan documenting the public API of src/orders.py in docs/orders.md. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T4-execute",
+    "class": "B",
+    "versions": [
+      "v1",
+      "v2"
+    ],
+    "prompt": "Use the running-when-a-request-is-made skill. Execute BuildPlans/add-order-total/PLAN.agent.md. The answer to the consequence check is yes. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T5-other",
+    "class": "C",
+    "versions": [
+      "v1",
+      "v2"
+    ],
+    "prompt": "Use the running-when-a-request-is-made skill. What does src/orders.py do? Answer to the structured-format question: No. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T6-plan-large",
+    "class": "A-staged",
+    "versions": [
+      "v2"
+    ],
+    "feature": true,
+    "prompt": "Use the running-when-a-request-is-made skill. Plan an orders subsystem for this repo: SQLite persistence with migrations, an HTTP JSON API (stdlib http.server) for create/get/list/cancel/total, token auth, a CLI, CSV export, a daily sales report, input validation, structured logging, unit tests for every part, a GitHub Actions CI workflow, API docs, and optionally a caching layer and performance tests. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T7-resume",
+    "class": "B-staged",
+    "versions": [
+      "v2"
+    ],
+    "feature": true,
+    "prompt": "Use the running-when-a-request-is-made skill. Continue the plan BuildPlans/orders-v2. The answer to the consequence check is yes. Run at most 2 stages. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  },
+  {
+    "id": "T8-low-context",
+    "class": "B-staged",
+    "versions": [
+      "v2"
+    ],
+    "feature": true,
+    "setup": {
+      "agent_context": {
+        "remaining": 4
+      }
+    },
+    "prompt": "Use the running-when-a-request-is-made skill. Continue the plan BuildPlans/orders-v2. The answer to the consequence check is yes. Run at most 2 stages. This is a non-interactive benchmark run. Nobody will answer questions. For every question you would ask, use your suggested default and record it as Source: Assumption. Output format: the standard set."
+  }
+]
