@@ -11,4 +11,4 @@ When and where each version was made: [PROVENANCE.md](PROVENANCE.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE). Copyright (c) 2026 <Your Full Name>.
+MIT. See [LICENSE](LICENSE). Copyright (c) 2026 Nguyen Phuc Quang Minh.
